@@ -1,5 +1,5 @@
 
-const { MongoClient } = require('mongodb');
+const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = "mongodb+srv://nathanielperry:lEa48UHVH3CADETV@cs20perry.xso7g.mongodb.net/?retryWrites=true&w=majority&appName=CS20Perry";
 
 
@@ -22,7 +22,7 @@ app.use(express.static('public')); // Serve static HTML files from the 'public' 
 app.get('/api/books', async function (req, res) {
     try {
         await client.connect();
-        
+
         const dbo = client.db("ShelfSwap");
         const collection = dbo.collection('books');
 
