@@ -122,7 +122,8 @@
            // Initialize book swap locations
         let swapLocations = [];
 
-fetch('/api/books')
+// Fetch data from the backend
+fetch('http://localhost:3000/api/books')
     .then(response => response.json())
     .then(data => {
         swapLocations = data;
