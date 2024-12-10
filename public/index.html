@@ -122,8 +122,10 @@
            // Initialize book swap locations
         let swapLocations = [];
 
+            const port = process.env.PORT || 3000;
+
 // Fetch data from the backend
-fetch('http://localhost:3000/api/books')
+fetch(port + '/api/books')
     .then(response => response.json())
     .then(data => {
         swapLocations = data;
