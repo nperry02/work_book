@@ -123,7 +123,9 @@
         let swapLocations = [];
 
 // Fetch data from the backend
-fetch('http://localhost:3000/api/books')
+// const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:3000';
+// fetch(`${API_BASE_URL}/api/books`)
+fetch('/api/books')
     .then(response => response.json())
     .then(data => {
         swapLocations = data;
